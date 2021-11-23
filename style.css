@@ -128,10 +128,10 @@ body{
 
 .input-searchBar{
     border-style: none;
-    background-color: rgb(250, 248, 250);
+    background-color: white;
     outline: none;
     font-size: 15px;
-    width: 60%;
+    width: 50%;
 }
 
 .icon{
@@ -192,17 +192,20 @@ body{
     color: rgba(255, 255, 255, 0.884);
     font-size: 17px;
     justify-content: space-between;
-    justify-items: center;
 }
 
 .competence-technique i{
     color: red;
     padding: 20px;
+    
 }
 
 .infos{
     width: 100%;
     margin-left: 15px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .icon-infos{
@@ -245,6 +248,7 @@ body{
 .competence-technique{
     display: flex;
     justify-content: space-between;
+    margin-top: 20px;
 }
 
 
@@ -259,6 +263,7 @@ body{
     flex-flow: column;
     justify-content: space-between;
     width: 80%;
+    margin-left: 15px;
 }
 
 
@@ -499,7 +504,7 @@ i{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 20px;
+    margin-top: 10px;
     flex-wrap: wrap;
 }
 
@@ -513,30 +518,32 @@ i{
     border-radius: 5px;
     background: white;
     padding: 20px;
-    display: flex;
-    flex-direction: column;
     width: 40%;
     height: inherit;
   }
 
-.langue{
+.check-langue{
+    margin-top: 15px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    
-
-}
-
-
-.check-langue{
-    margin-top: 20px;
-    flex-direction: row;
-    justify-items: center;
+    flex-wrap: wrap;
 }
 
 #anglais{
-    margin-top: 25px;
+    margin-top: 10px;
 }
+
+
+/* .check-langue{
+    margin-top: 20px;
+    flex-direction: row;
+    justify-items: center;
+} */
+
+/* #anglais{
+    margin-top: 25px;
+} */
 
 .cursus-academique{
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
@@ -568,6 +575,15 @@ i{
         order: 2;
         margin-bottom: 20px;
     }
+    
+    
+}
+
+@media screen and (max-width: 700px){
+    .container{
+        width: 100%;
+    }
+    
     
     
 }
