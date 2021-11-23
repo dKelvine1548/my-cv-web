@@ -129,9 +129,10 @@ body{
 .input-searchBar{
     border-style: none;
     background-color: white;
-    outline: none;
-    font-size: 15px;
-    width: 100%;
+    font-size: 13px;
+    width: 70%;
+    flex-wrap: wrap;
+    margin-left: 10px;
 }
 
 .icon{
@@ -521,7 +522,8 @@ i{
   }
 
 .check-langue{
-    margin-top: 15px;
+
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
