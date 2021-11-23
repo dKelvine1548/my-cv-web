@@ -131,7 +131,7 @@ body{
     background-color: white;
     outline: none;
     font-size: 15px;
-    width: 50%;
+    width: 100%;
 }
 
 .icon{
@@ -203,9 +203,7 @@ body{
 .infos{
     width: 100%;
     margin-left: 15px;
-    align-items: center;
     flex-direction: column;
-    justify-content: center;
 }
 
 .icon-infos{
