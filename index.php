@@ -14,13 +14,26 @@
 <body>
     <div class="container">
         <div class="section1">
-            <?php include('composants/section1.php')?>
+
+            <?php require_once('composants/profile.php')?>
+
+            <?php require_once('composants/coordonnees_profile.php')?>
         </div>
+
         <div class="section2">
-            <?php include('composants/section2.php')?>
+
+            <?php require_once('composants/competences_techniques.php')?>
+
         </div>
+
         <div class="section3">
-            <?php include('composants/section3.php')?>
+
+            <?php require_once('composants/exprerience_prof.php')?>
+
+            <?php require_once('composants/interets_langues.php')?>
+
+            <?php require_once('composants/cursus_academique.php')?>
+
         </div>    
         </div>
     </div>

@@ -1,13 +1,19 @@
 <?php 
 
+    $titre_competence_technique = array("Développement front-end", "Développement back-end", "Développement mobile",
+    "UI / UX Design", "Base de données & Big Data", "Outils / Environnements");
+
+    $element_competence_technique = array("HTML5, SASS, VueJS, Angular, JavaFX","NodeJS, Drupal 8, Laravel,
+     Kotlin, Java EE 7","Android kotlin, IOS Swift, Cordova, Flutter", "Photoshop cc, Adobe XD, Material Design",
+    "Oracle 11g, PostgreSQL, Hadoop, Talend DI", "Visual Paradigm, Git, Docker, K8s, Linux");
 ?>
 
 <div>
     <div class="competence-technique">
                     <input type="checkbox"  id="check-input" checked="true">
                     <div class="competence">
-                        <h3 class="titre-competence">Développement front-end</h3>
-                        <p class="specification">HTML5, SASS, VueJS, Angular, JavaFX,...</p>
+                        <h2 class="titre-competence"><?php echo $titre_competence_technique[0]?></h2>
+                        <p class="specification"><?php echo $element_competence_technique[0]?></p>
                         <div class="progressbar">
                             <span class="progressbar-blue" id="progressbar-blue1"></span>
                             <span class="corner" id="corner1"></span>
@@ -19,8 +25,8 @@
                 <div class="competence-technique">
                     <input type="checkbox"  id="check-input" checked="true">
                     <div class="competence">
-                        <h3 class="titre-competence">Développement back-end</h3>
-                        <p class="specification">NodeJS, Drupal 8, Laravel, Kotlin, Java EE 7</p>
+                        <h2 class="titre-competence"><?php echo $titre_competence_technique[1]?></h2>
+                        <p class="specification"><?php echo $element_competence_technique[1]?></p>
                         <div class="progressbar">
                             <span class="progressbar-blue" id="progressbar-blue2"></span>
                             <span class="corner" id="corner2"></span>
@@ -32,8 +38,8 @@
                 <div class="competence-technique">
                     <input type="checkbox"  id="check-input" checked="true" >
                     <div class="competence">
-                        <h3 class="titre-competence">Développement mobile</h3>
-                        <p class="specification">Android kotlin, IOS Swift, Cordova, Flutter</p>
+                        <h2 class="titre-competence"><?php echo $titre_competence_technique[2]?></h2>
+                        <p class="specification"><?php echo $element_competence_technique[2]?></p>
                         <div class="progressbar">
                             <span class="progressbar-blue" id="progressbar-blue3"></span>
                             <span class="corner" id="corner3"></span>
@@ -45,8 +51,8 @@
                 <div class="competence-technique">
                     <input type="checkbox"  id="check-input" checked="true">
                     <div class="competence">
-                        <h3 class="titre-competence">UI / UX Design</h3>
-                        <p class="specification">Photoshop cc, Adobe XD, Material Design</p>
+                        <h2 class="titre-competence"><?php echo $titre_competence_technique[3]?></h2>
+                        <p class="specification"><?php echo $element_competence_technique[3]?></p>
                         <div class="progressbar">
                             <span class="progressbar-blue" id="progressbar-blue4"></span>
                             <span class="corner" id="corner4"></span>
@@ -58,8 +64,8 @@
                 <div class="competence-technique">
                     <input type="checkbox"  id="check-input" checked="true">
                     <div class="competence">
-                        <h3 class="titre-competence">Base de données & Big Data</h3>
-                        <p class="specification">Oracle 11g, PostgreSQL, Hadoop, Talend DI</p>
+                        <h2 class="titre-competence"><?php echo $titre_competence_technique[4]?></h2>
+                        <p class="specification"><?php echo $element_competence_technique[4]?></p>
                         <div class="progressbar">
                             <span class="progressbar-blue" id="progressbar-blue5"></span>
                             <span class="corner" id="corner5"></span>
@@ -71,8 +77,8 @@
                 <div class="competence-technique">
                     <input type="checkbox"  id="check-input" checked="true">
                     <div class="competence">
-                        <h3 class="titre-competence">Outils / Environnements</h3>
-                        <p class="specification">Visual Paradigm, Git, Docker, K8s, Linux</p>
+                        <h2 class="titre-competence"><?php echo $titre_competence_technique[5]?></h2>
+                        <p class="specification"><?php echo $element_competence_technique[5]?></p>
                         <div class="progressbar">
                             <span class="progressbar-blue" id="progressbar-blue6"></span>
                             <span class="corner" id="corner6"></span>
