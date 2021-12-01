@@ -24,6 +24,7 @@ body{
     "b c";
     box-shadow: 0 35px 55px rgba(0, 0, 0, 0.1);
     width: 80%;
+    grid-template-rows: auto auto auto auto;
     grid-column-gap: 2% ;
     
 }
@@ -207,6 +208,10 @@ body{
     background: white;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
+    grid-row-start: 2;
+    grid-column-end: 2;
+    grid-column-start: 1;
+    grid-row-end: 50;
 }
 
 .competence-technique{
@@ -370,7 +375,6 @@ i{
 }
 
 .responsabilite{
-    width: 100%;
     padding: 10px;
     background-color: white;
     border-bottom-left-radius: 5px;
@@ -380,10 +384,9 @@ i{
 
 .scrollbar {
     overflow-y: scroll;
-    width: 100%;
-    height: 500px;
+    height: 520px;
     border: 1px; 
-    padding-right: 10px;
+    padding-right: 20px;
     
 }
 
@@ -588,3 +591,32 @@ i{
     }
 }
 
+@media screen and (max-width: 736px){
+    .container{
+        width: 100%;
+    }
+
+    .responsabilite{
+        height: 725px;
+    }
+    
+    .scrollbar{
+        height: 715px;
+    }
+}
+
+
+
+@media screen and (max-width: 2310px){
+    .container{
+        width: 100%;
+    }
+
+    .responsabilite{
+        height: 725px;
+    }
+    
+    .scrollbar{
+        height: 715px;
+    }
+}

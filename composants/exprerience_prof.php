@@ -120,7 +120,6 @@
                                 <hr class="trait" id="trait-fin">
                             </div>
                             <?php }  ?>
-
                         </div>
                     </div>
     </div>
