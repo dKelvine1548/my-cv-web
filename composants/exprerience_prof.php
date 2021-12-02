@@ -101,7 +101,7 @@
                         <div class="element-titre">
                             <img src="img/real_estate_80px.png" alt="" class="icon-infos" id="image-batiment" />
                             <div class="titre-texte">
-                                <h3>Expérience Professionnelle (<?php echo $annee_experience . "  ans "?>) </h3>
+                                <h3>Expérience Professionnelle (<?php echo $annee_experience. "ans"?>)</h3>
                                 <i> Expertise en entreprise</i>
                             </div>
 
