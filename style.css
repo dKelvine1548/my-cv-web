@@ -574,6 +574,13 @@ i{
         order: 2;
         margin-bottom: 20px;
     }
+
+    .searchBar{
+        margin-top: 5px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
     .deux-block{
         display: flex;
         flex-direction: column;
@@ -581,7 +588,6 @@ i{
         justify-content: space-between;
     }
 
-    
     .point-interet{
         width: 100%;
     }
@@ -603,11 +609,18 @@ i{
     .scrollbar{
         height: 715px;
     }
+
+    .searchBar{
+        margin-top: 5px;
+        margin-right: 5px;
+        margin-left: 5px;
+    }
 }
 
 
 
 @media screen and (max-width: 2310px){
+    
     .container{
         width: 100%;
     }
@@ -618,5 +631,11 @@ i{
     
     .scrollbar{
         height: 715px;
+    }
+
+    .searchBar{
+        margin-top: 5px;
+        margin-left: 5px;
+        margin-right: 5px;
     }
 }
