@@ -79,9 +79,11 @@ body{
     padding: 10px;
     align-content: center;
     z-index: 3;
-    /* margin-top: 5px;
-    margin-left: 5px;
-    margin-right: 5px; */
+    margin-top: 2px;
+    margin-left: 2px;
+    margin-right: 2px;
+
+
     
 }
 
@@ -91,14 +93,14 @@ body{
     font-size: 13px;
     width: 60%;
     flex-wrap: wrap;
-    margin-top: 5px;
+    /* margin-top: 5px;
     margin-left: 5px;
-    margin-right: 5px;
+    margin-right: 5px; */
 }
 
 .icon{
     width: 25px;
-    width: 25px;
+    height: 25px;
 }
 
 
@@ -121,6 +123,8 @@ body{
     position: relative;
 }
 
+
+
 .poste{
     color: white;
     margin-top: 22px;
@@ -138,7 +142,7 @@ body{
     
 }
 
-.btn-ajouter{
+.btn-envoyer{
     position: absolute;
     align-items: flex-end;
     height: 50px;
@@ -149,6 +153,25 @@ body{
     z-index: 3;
     top: -25px;
     right: 30px;
+}
+
+.group-button{
+    display: none;
+    margin-right: 50px;
+    position: relative;
+    
+}
+
+#btn-email{
+    margin-top: -70px;
+    background-color: palevioletred;
+}
+
+
+#btn-send{
+    
+    background-color: lightgreen;
+    
 }
 
 .bloc{
@@ -176,7 +199,7 @@ body{
 .icon-infos{
     width: 30px;
     height: 30px;
-}
+} 
 
 .trait {
     color: rgba(253, 251, 251, 0.534); 
@@ -543,10 +566,11 @@ i{
         margin-bottom: 25px;
     }
 
-    .input-searchBar{
-        margin-top: 5px;
-        margin-left: 5px;
-        margin-right: 5px;
+    .searchBar{
+        margin-top: 2px;
+        margin-left: 2px;
+        margin-right: 2px;
+        flex-wrap: wrap;
     }
 
     .point-interet{
@@ -580,10 +604,11 @@ i{
         margin-bottom: 20px;
     }
 
-    .input-searchBar{
-        margin-top: 5px;
-        margin-left: 5px;
-        margin-right: 5px;
+    .searchBar{
+        margin-top: 2px;
+        margin-left: 2px;
+        margin-right: 2px;
+        flex-wrap: wrap;
     }
 
     .deux-block{
@@ -615,10 +640,11 @@ i{
         height: 715px;
     }
 
-    .input-searchBar{
-        margin-top: 5px;
-        margin-right: 5px;
-        margin-left: 5px;
+    .searchBar{
+        margin-top: 2px;
+        margin-left: 2px;
+        margin-right: 2px;
+        flex-wrap: wrap;
     }
 }
 
@@ -638,9 +664,10 @@ i{
         height: 715px;
     }
 
-    .input-searchBar{
-        margin-top: 5px;
-        margin-left: 5px;
-        margin-right: 5px;
+  .searchBar{
+        margin-top: 2px;
+        margin-left: 2px;
+        margin-right: 2px;
+        flex-wrap: wrap;
     }
 }

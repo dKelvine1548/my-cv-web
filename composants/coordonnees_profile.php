@@ -21,13 +21,60 @@
     $contrat=31;
     $anne_experience=12;
 
+    
+
 ?>
 
+<!-- <script>
+    
+    function DisplayButtons() {
+        document.getElementById('group-buttons');
+    } 
+
+</script> -->
 
 <div class="coordonnees">
-        <button class="btn-ajouter">
-            <img src="../img/share_30px.png" alt="" class="icon" id="icon-infos">
+
+        <div class="group-button" id="group-buttons">
+            <button class="btn-envoyer" id = "btn-email">
+                <img src="../img/mail_filled_30px.png" alt="" class="icon">
+            </button>
+
+            <button class="btn-envoyer" id = "btn-send">
+                <img src="../img/paper_plane_filled_50px.png" alt="" class="icon">
+            </button>
+        </div>
+
+        <button class="btn-envoyer" onclick="showDiv();"  id="button-click">
+            <img src="../img/share_30px.png" alt="" class="icon">
         </button>
+
+        <script>
+            function showDiv() {
+                var maDiv = document.getElementById('group-buttons');
+
+                //get the current value of div's  diasplay property
+                var displaySetting = maDiv.style.display;
+
+                //get the id of button that will display our div's button
+                var monButton = document.getElementById('button-click');
+
+                if(displaySetting == 'block'){
+                    maDiv.style.display = 'none';
+                    monButton.innerHTML = "<img src=\'../img/share_30px.png'  class =\'icon\'>"
+                }
+
+                else{
+                    maDiv.style.display = 'block';
+                    monButton.innerHTML = "<img src=\'../img/multiply_24px.png'  class =\'icon\'>";
+                }
+
+                // document.getElementById('group-buttons').style.display = "block";
+                
+            }
+        </script>
+        
+        
         <div class="infos-perso">
                         <div class="bloc">
                         <img src="img/birthday_cake_30px.png" alt="" class="icon-infos">
@@ -79,5 +126,6 @@
 
                         </div>
         </div>
+
 </div>
 <div class="trait-rouge"></div>

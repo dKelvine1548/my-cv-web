@@ -94,6 +94,7 @@
     // $smal_year = date_format($smal_date_convert, "yyyy");
     $annee_experience = $current_date - $smal_year;
     
+    
 ?>
 
                 <div class="experience-professionnelle">
@@ -117,6 +118,7 @@
                                 <p class="date">De <?php echo $infos["start_date"]." ".$infos["end_date"]?> - <?php echo $infos["compagny_site"] ?></p>
 
                                 <p class="role"> <?php echo $infos["realisation"] ?></p>
+                                
                                 <hr class="trait" id="trait-fin">
                             </div>
                             <?php }  ?>
