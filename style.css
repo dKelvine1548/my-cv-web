@@ -12,7 +12,7 @@ body{
     align-items: center;
 }
 
-.container  {
+.containers {
     background-color: #f0f0f0d3;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
     border: 1px;
@@ -23,7 +23,7 @@ body{
     "a c"
     "b c";
     box-shadow: 0 35px 55px rgba(0, 0, 0, 0.1);
-    width: 80%;
+    width: 90%;
     grid-template-rows: auto auto auto auto;
     grid-column-gap: 2% ;
     
@@ -159,6 +159,8 @@ body{
     display: none;
     margin-right: 50px;
     position: relative;
+    width: 20px;
+    height: 20px;
     
 }
 

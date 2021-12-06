@@ -1,6 +1,13 @@
 
 
-<?php 
+<?php
+
+// require '../PHPMailer/src/Exception.php';
+// require '../PHPMailer/src/PHPMailer.php';
+// require '../PHPMailer/src/SMTP.php';
+
+// use PHPMailer\PHPMailer\PHPMailer;
+
 
     $annee_naissance="15 janvier 1990";
     $region_origine="ouest";
@@ -20,29 +27,214 @@
     $projet=45;
     $contrat=31;
     $anne_experience=12;
+        
+ 
 
+      
+      //include '../dompdf/src/Dompdf.php';
+        
+        
+        //use PHPMailer\PHPMailer\Exception;
+
+        // use Dompdf\Dompdf;
+
+        
+        
+
+    //     $message = '';
+    //     $email= "Metier : Architecte logiciel /DevOps";
+    //     $filename = md5(rand()) . '.pdf';
+    //     //$stylesheet = file_get_contents('../index.php'); // Get css content
+    //     $html = '<link rel="stylesheet" href="../style.css">';
+    //     $html .= $email;
+
+    //     // Setup PDF
+    //     $dompdf = new Dompdf('utf-8', 'A4-L'); // New PDF object with encoding & page size
+    //     $dompdf->setAutoTopMargin = 'stretch'; // Set pdf top margin to stretch to avoid content overlapping
+    //     $dompdf->setAutoBottomMargin = 'stretch'; // Set pdf bottom margin to stretch to avoid content overlapping
+    // //     // PDF header content
+    // //     $dompdf->get_canvas() ;
+    // //    // PDF footer content                      
+    // //     $dompdf->SetHTMLFooter('<div class="pdf-footer">
+    // //                             <a href="http://www.lubus.in">www.lubus.in</a>
+    // //                         </div>'); 
+    //     $dompdf->load_html(utf8_decode($html));
+    //     $options = $dompdf->getOptions();
+    //     $options->setDefaultFont('Courier');
+    //     $dompdf->setOptions($options); // Writing style to pdf
+    //     $dompdf->render();
+    //     // FOR EMAIL
+    //     $content = $dompdf->Output('', 'S'); // Saving pdf to attach to email 
+    //     file_put_contents($filename, $content);
+        //$content = chunk_split(base64_encode($content));
+
+
+
+        // Email settings
+
+        // $mail = new PHPMailer;
+        // $mail-> isSMTP();
+        // $mail->Host = 'smtp.example.com';
+        // $mail->Port = '587';
+        // $mail->SMTPAuth = true;
+        // $mail->Username = 'djokouokelvine@gmail.com';
+        // $mail->Password = 'Seigneur!1';
+        // $mail->SMTPSecure = 'tls';
+
+
+        // $mail->From = 'djokouokelvine@gmail.com';
+        // $mail->FromName = 'Kelvine Djokouo';
+        // $mail->addAddress('djokouokelvine@gmail.com');
+        
+        // //$mail->WordWrap = 50;
+        // $mail-> Subject = 'My Cv';
+
+        // $mail->IsHTML(true);
+
+        // $mailContent = '<h2>Send HTML Email using SMTP Server in PHP</h2> 
+        // <p>It is a test email by CodexWorld, sent via SMTP server with PHPMailer using PHP.</p>'; 
+        
+        // //$mail-> AddAttachment('../img/fleur.jpg', 'fleur.jpg');
+
+        // $mail->Body = $mailContent;
+        // $message='';
+
+        // if(!$mail-> Send()){
+        //     $message = '<label for="">Echec d\'envoi d\'email. Erreur: </label>'. $mail->ErrorInfo;    
+        // }else{
+        //     $message = 'Message envoyé';
+        // }
+
+        
+       // unlink($filename);
+        
+        
+        if(isset($_POST["action"])){
+            echo $message;
+        }
+
+        // $mailto = "djokouokelvine@gmail.com";
+        // $from_name = 'Djokouo kelvine';
+        // $from_mail = 'djokouokelvine@gmail.com';
+        // $replyto = 'djokouokelvine@gmail.com';
+        // $uid = md5(uniqid(time())); 
+        // $subject = 'cv en PDF';
+        // $message = 'Télécharger mon cv pdf';
+        
+
+        // $header = "From: ".$from_name." <".$from_mail.">\r\n";
+        // $header .= "Reply-To: ".$replyto."\r\n";
+        // $header .= "MIME-Version: 1.0\r\n";
+        // $header .= "Content-Type: multipart/mixed; boundary=\"".$uid."\"\r\n\r\n";
+        // $header .= "This is a multi-part message in MIME format.\r\n";
+        // $header .= "--".$uid."\r\n";
+        // $header .= "Content-type:text/plain; charset=iso-8859-1\r\n";
+        // $header .= "Content-Transfer-Encoding: 7bit\r\n\r\n";
+        // $header .= $message."\r\n\r\n";
+        // $header .= "--".$uid."\r\n";
+        // $header .= "Content-Type: application/pdf; name=\"".$filename."\"\r\n";
+        // $header .= "Content-Transfer-Encoding: base64\r\n";
+        // $header .= "Content-Disposition: attachment; filename=\"".$filename."\"\r\n\r\n";
+        // $header .= $content."\r\n\r\n";
+        // $header .= "--".$uid."--";
+        // $is_sent = @mail($mailto, $subject, "", $header);
+
+        // //$mpdf->Output(); // For sending Output to browser
+        // $dompdf->Output('cv.pdf','D'); // For Download
+        // exit;
     
 
 ?>
 
-<!-- <script>
-    
-    function DisplayButtons() {
-        document.getElementById('group-buttons');
-    } 
+  
 
-</script> -->
+
+
+<!-- modal formular -->
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Envoyer un message</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form method="get" action="composants/envoi_mail.php">
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Recipient:</label>
+            <input type="text" class="form-control" id="recipient-name" name="adresseMail">
+          </div>
+          <div class="mb-3">
+            <label for="message-text" class="col-form-label">Message:</label>
+            <textarea class="form-control" id="message-text"></textarea>
+          </div>
+          <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary">Send message</button>
+      </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<script>
+    var exampleModal = document.getElementById('exampleModal')
+    exampleModal.addEventListener('show.bs.modal', function (event) {
+    // Button that triggered the modal
+    var button = event.relatedTarget
+    // Extract info from data-bs-* attributes
+    var recipient = button.getAttribute('data-bs-whatever')
+    // If necessary, you could initiate an AJAX request here
+    // and then do the updating in a callback.
+    //
+    // Update the modal's content.
+    var modalTitle = exampleModal.querySelector('.modal-title')
+    var modalBodyInput = exampleModal.querySelector('.modal-body input')
+
+    modalTitle.textContent = 'New message to ' + recipient
+    modalBodyInput.value = recipient
+})
+</script>
+
+
+
+
+
+
+
+
+
+
 
 <div class="coordonnees">
 
         <div class="group-button" id="group-buttons">
-            <button class="btn-envoyer" id = "btn-email">
+            <button class="btn-envoyer" id = "btn-email" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">
                 <img src="../img/mail_filled_30px.png" alt="" class="icon">
             </button>
 
-            <button class="btn-envoyer" id = "btn-send">
-                <img src="../img/paper_plane_filled_50px.png" alt="" class="icon">
-            </button>
+            <script>
+                function retieveEmail(){
+                    var email = prompt("Veuillez entrez votre adresse email");
+                    if(email==""){
+                        prompt("Svp veuillez entrez votre adresse email");
+                    }
+
+                    else{
+                        exit;
+                    }
+                    
+                }
+            </script>
+            <!-- <form method="post">  -->
+                <button class="btn-envoyer" id = "btn-send" type="submit" name="action" >
+                    <img src="../img/paper_plane_filled_50px.png" alt="" class="icon">
+                </button>
+            <!-- </form>     -->
         </div>
 
         <button class="btn-envoyer" onclick="showDiv();"  id="button-click">
@@ -68,8 +260,7 @@
                     maDiv.style.display = 'block';
                     monButton.innerHTML = "<img src=\'../img/multiply_24px.png'  class =\'icon\'>";
                 }
-
-                // document.getElementById('group-buttons').style.display = "block";
+ 
                 
             }
         </script>

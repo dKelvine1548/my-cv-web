@@ -10,6 +10,7 @@
         $this->Nom = $nom;
         $this->Metier = $metier;
         $this->Photo = $photo;
+        
     }
 }
 ?>
