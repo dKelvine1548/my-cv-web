@@ -114,7 +114,7 @@ class Personne {
                     <img src="../img/share_30px.png" alt="" class="icon">
                 </button>
 
-                    require_once "../js/display_buttons.php"
+                    require_once ../js/display_buttons.php"
 
                 <div class="infos-perso">
                     <div class="bloc">
@@ -144,7 +144,7 @@ class Personne {
                         <img src="img/phone_30px.png" alt="" class="icon-infos">
                         <div class="infos">
                             <strong>
-                                <p>'.$this->telephone.' ?></p>
+                                <p>'.$this->telephone.'</p>
                             </strong>
                             <p>'.implode(", " ,$this->reseau_social).'</p>
                             <hr class="trait">
