@@ -1192,8 +1192,7 @@ class Cpdf
                 $font_obj->reduce();
 
                 // Write new font
-                $tmp_name = $this->tmp . "/" . basename($fbfile) . ".tmp." . uniqid();
-                touch($tmp_name);
+                $tmp_name = @tempnam($this->tmp, "cpdf_subset_");
                 $font_obj->open($tmp_name, BinaryStream::modeReadWrite);
                 $font_obj->encode(["OS/2"]);
                 $font_obj->close();
@@ -1792,14 +1791,14 @@ EOT;
 
                     // dates must be outputted as-is, without Unicode transformations
                     if ($k !== 'CreationDate' && $k !== 'ModDate') {
-                        $v = $this->filterText($v, true, false);
+                        $v = $this->utf8toUtf16BE($v);
                     }
 
                     if ($encrypted) {
                         $v = $this->ARC4($v);
                     }
 
-                    $res .= $v;
+                    $res .= $this->filterText($v, false, false);
                     $res .= ")\n";
                 }
 
@@ -2919,15 +2918,17 @@ EOT;
                 break;
             case 'out':
                 $info = &$this->objects[$id]['info'];
+                $filename = $this->utf8toUtf16BE($info['filename']);
+                $description = $this->utf8toUtf16BE($info['description']);
 
                 if ($this->encrypted) {
                     $this->encryptInit($id);
-                    $filename = $this->ARC4($info['filename']);
-                    $description = $this->ARC4($info['description']);
-                } else {
-                    $filename = $info['filename'];
-                    $description = $info['description'];
+                    $filename = $this->ARC4($filename);
+                    $description = $this->ARC4($description);
                 }
+
+                $filename = $this->filterText($filename, false, false);
+                $description = $this->filterText($description, false, false);
 
                 $res = "\n$id 0 obj <</Type /Filespec /EF";
                 $res .= " <</F " . $info['embedded_reference'] . " 0 R >>";

@@ -155,25 +155,32 @@ body{
     right: 30px;
 }
 
-.group-button{
+.deux-buttons{
     display: none;
-    margin-right: 50px;
-    position: relative;
-    width: 20px;
-    height: 20px;
-    
+    margin-right: 40px;
+    position: relative;  
 }
 
 #btn-email{
-    margin-top: -70px;
+    margin-top: -50px;
     background-color: palevioletred;
+    width: 40px;
+    height: 40px;
 }
 
 
 #btn-send{
     
     background-color: lightgreen;
+    width: 40px;
+    height: 40px;
     
+}
+
+#small-icon{
+    width: 20px;
+    height: 20px;
+    justify-content: center;
 }
 
 .bloc{
