@@ -13,25 +13,26 @@
     use PHPMailer\PHPMailer\Exception;
 
 
-    require_once '../dompdf/src/Dompdf.php';
-    use Dompdf\Dompdf;
+    // require_once '../dompdf/src/Dompdf.php';
+    // use Dompdf\Dompdf;
     
     //Generate pdf
-    $filename = md5(rand()) . '.pdf';
-    $html_code = '<link rel="stylesheet" href="../style.css">';
-    ob_start();
-    require '../index.php';
-    $html_code.= ob_get_contents();
-    ob_end_clean(); 
-    $dompdf = new Dompdf();
-    //$dompdf->load_html( $html_code);
-    //$dompdf->render();
-    $file = $dompdf->output();
-    file_put_contents($filename, $file); 
+    // $filename = md5(rand()) . '.pdf';
+    // $html_code = '<link rel="stylesheet" href="../style.css">';
+    // ob_start();
+    // require '../index.php';
+    // $html_code.= ob_get_contents();
+    // ob_end_clean(); 
+    // $dompdf = new Dompdf();
+    // $dompdf->loadHtml( $html_code);
+    // $dompdf->render();
+    // $file = $dompdf->output();
+    // file_put_contents($filename, $file); 
 
 
     //send email
     session_start();
+    $_SESSION["message"]= null;
     
     //Create an instance; passing `true` enables exceptions
     $mail = new PHPMailer(true);
@@ -60,39 +61,38 @@
             $mail->setFrom('djokouokelvine@gmail.com', 'Kelvine Djokouo');
             $mail->addAddress($destination_mail);     //Add a recipient
         
-            $mail->wordwrap = 50;
+            //$mail->wordwrap = 50;
             //Content
             $mail->isHTML(true);                                  //Set email format to HTML
             $mail->Subject = 'Ceci est mon cv';
-            $mail->addAttachment($filename);
-            $mail->Body = 'Svp veuillez consulter mon cv ';
+            //$mail->addAttachment($filename);
+            //$mail->Body = 'Svp veuillez consulter mon cv ';
  
-            // ob_start();
-            // require '../index.php';
-            // $body = ob_get_contents();
-            // ob_end_clean(); 
+            ob_start();
+            require '../index.php';
+            $body = ob_get_contents();
+            ob_clean(); 
 
-            // $mail->Body = $body; 
+            $mail->Body = $body; 
             //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients'; 
 
-            $_SESSION["message"] = " "; 
             if(!$mail->send()){
                 echo $_SESSION["message"] = "Erreur!"; 
-                unlink($filename);
-                //header("location: ../index.php"); 
+                //unlink($filename);
+                header("location: ../index.php"); 
             }
             
             else{
                 echo $_SESSION["message"] = '<h5 style= "color:green;" >Message envoyé avec succès</h5>';
-                
-                //header("location: ../index.php");
+                header("location: ../index.php");
             }
             
         } catch (Exception $e) {
+            
             echo  $_SESSION["message"]= "Message non envoyé. Mailer Error: {$mail->ErrorInfo}";
             //header("location: ../index.php");
         }
     }else{
-        echo $message = "Veuillez renseigner votre adresse mail"; 
+        echo $_SESSION["message"] = "Veuillez renseigner votre adresse mail"; 
     }
 ?>

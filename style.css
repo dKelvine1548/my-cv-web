@@ -162,19 +162,30 @@ body{
 }
 
 #btn-email{
-    margin-top: -50px;
-    background-color: palevioletred;
+    margin-top: -100px; 
+    margin-right: -10px;
+    background-color: palevioletred;     
+    width: 40px;    
+    height: 40px;    
+}
+
+
+#btn-download{ 
+    background-color:salmon;                
+    width: 40px; 
+    height: 40px; 
+    margin-top: -50px;      
+    
+}
+
+#btn-edit{
+    background-color:limegreen; 
     width: 40px;
     height: 40px;
 }
 
-
-#btn-send{
-    
-    background-color: lightgreen;
-    width: 40px;
-    height: 40px;
-    
+.message{
+    color: rgb(11, 235, 40);
 }
 
 #small-icon{
@@ -242,17 +253,16 @@ body{
     border-bottom-right-radius: 5px;
     grid-row-start: 2;
     grid-column-end: 2;
-    grid-column-start: 1;
+    grid-column-start: 1;    
     grid-row-end: 50;
 }
 
-.competence-technique{
+.competence-technique{    
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between;                                                                                                                                         
     margin-top: 20px;
 
 }
-
 
 #check-input{
     width: 20px;
@@ -678,5 +688,106 @@ i{
         margin-left: 2px;
         margin-right: 2px;
         flex-wrap: wrap;
+    }
+
+    
+
+    /* css of login page*/
+
+    .main-content{
+        width: 120%;
+        height: 40%;
+        border-radius: 20px;
+        box-shadow: 0 5px 5px rgba(0,0,0,.4);
+        margin: 5em auto;
+        display: flex;
+    }
+    .company__info{
+        background-color:#015F9F;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: #fff;
+        width: 150px;
+        text-align: center;
+    }
+
+    .fa-android{
+        font-size:3em;
+    }
+
+    @media screen and (max-width: 640px) {
+        .main-content{width: 90%;}
+        .company__info{
+            display: none;
+        }
+        .login_form{
+            border-top-left-radius:20px;
+            border-bottom-left-radius:20px;
+        }
+    } 
+
+    @media screen and (min-width: 642px) and (max-width:800px){
+        .main-content{width: 70%;}
+    }
+
+    .row > h2{
+        color:#015F9F;
+        text-align: center;
+    }
+
+    #two-button{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .login_form{
+        background-color: #fff;
+        border-top-right-radius:20px;
+        border-bottom-right-radius:20px;
+        border-top:1px solid #ccc;
+        border-right:1px solid #ccc;
+        width: 90%;
+       
+    }
+    form{
+        padding: 0 2em;
+    }
+    .form__input{
+        width: 100%;
+        border:0px solid transparent;
+        border-radius: 0;
+        border-bottom: 1px solid #aaa;
+        padding: 1em .5em .5em;
+        padding-left: 2em;
+        outline:none;
+        margin:1.5em auto;
+        transition: all .5s ease;
+    }
+    .form__input:focus{
+        border-bottom-color: #015F9F;
+        box-shadow: 0 0 5px rgba(0,80,80,.4); 
+        border-radius: 4px;
+    }
+    .btn{
+        transition: all .5s ease;
+        width: 80%;
+        height: 30px;
+        border-radius: 30px;
+        color:#015F9F;
+        font-weight: 600;
+        background-color: #fff;
+        border: 1px solid #015F9F;
+        margin-top: 1.5em;
+        margin-bottom: 1em;
+        align-items: center; 
+        margin-left: 30px;
+    }
+    .btn:hover, .btn:focus{
+        background-color: #015F9F;
+        color:#fff;
     }
 }
